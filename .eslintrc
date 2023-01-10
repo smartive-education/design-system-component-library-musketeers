@@ -1,0 +1,4 @@
+{
+  "extends": ["@smartive/eslint-config/react"],
+  "ignorePatterns": ["*.mdx"]
+}

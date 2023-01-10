@@ -1,15 +1,55 @@
 {
-  "name": "@smartive-education/todo-insert-package-name-here",
+  "name": "@smartive-education/design-system-component-library-musketeers",
   "version": "0.0.0-development",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com",
     "tag": "latest"
   },
-  "scripts": {
-    "build": "echo 'build'",
-    "build-storybook": "echo 'build storybook'"
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./preset": "./dist/tailwind-preset-config-musketeers.js"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "scripts": {
+    "build": "rm -rf dist && yes | npm run build-icons && tsc && npm run copy-tailwind-preset",
+    "build-icons": "npx @svgr/cli@5.5.0 --config-file \".svgrrc.js\" --out-dir ./src/components/icons -- ./src/assets/icons",
+    "copy-tailwind-preset": "cp ./tailwind-preset-config-musketeers.js dist",
+    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -p 6006",
+    "lint": "eslint src/components",
+    "lint:fix": "eslint src/components --fix"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@smartive/eslint-config": "^3.1.1",
+    "@smartive/prettier-config": "^3.0.0",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack4": "^6.5.15",
+    "@storybook/manager-webpack4": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
+    "@svgr/webpack": "^5.5.0",
+    "@tsconfig/node16": "^1.0.3",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^8.3.0",
+    "eslint": "^8.29.0",
+    "postcss": "^8.4.19",
+    "prettier": "^2.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.3"
+  }
 }

@@ -1,0 +1,127 @@
+import { StorybookMeta } from './components.config';
+import { Meta, IconGallery, IconItem } from '@storybook/addon-docs/';
+
+import ArrowLeft from '../components/icons/ArrowLeft';
+import ArrowUp from '../components/icons/ArrowUp';
+import ArrowRight from '../components/icons/ArrowRight';
+import ArrowDown from '../components/icons/ArrowDown';
+import Calendar from '../components/icons/Calendar';
+import Cancel from '../components/icons/Cancel';
+import Checkmark from '../components/icons/Checkmark';
+import Edit from '../components/icons/Edit';
+import Eye from '../components/icons/Eye';
+import Fullscreen from '../components/icons/Fullscreen';
+import Heart from '../components/icons/Heart';
+import HeartFilled from '../components/icons/HeartFilled';
+import Location from '../components/icons/Location';
+import LogOut from '../components/icons/LogOut';
+import Mumble from '../components/icons/Mumble';
+import Profile from '../components/icons/Profile';
+import Reply from '../components/icons/Reply';
+import ReplyFilled from '../components/icons/ReplyFilled';
+import Repost from '../components/icons/Repost';
+import Send from '../components/icons/Send';
+import Settings from '../components/icons/Settings';
+import Share from '../components/icons/Share';
+import Time from '../components/icons/Time';
+import Upload from '../components/icons/Upload';
+
+<Meta title={`${StorybookMeta.FOUNDATIONS}/Icons`} />
+
+# Icons
+
+Icons will be generated on build time from src/assets/icons/\*.svg via SVGR and converted to React Components.
+If you add new SVG Icons, please run "$npm run build-icons" to generate React components.
+
+The icons will use the cascading currentColor from parent elements. Tailwind's "text-" or "fill-" classes can be used too to change the color of the Icon.<br/>
+"width" and "height" attributes can be used to set the size in pixels:
+
+<br />
+
+## Example
+
+`import Calendar from "../components/icons/Calendar";`<br/>
+`...`<br/>
+`<Calendar color="text-violet-600" width="50" height="50" />`
+
+<Calendar color="text-violet-600" width="50" height="50" />
+
+<br />
+
+## Available Mumble Icons
+
+<IconGallery>
+  <IconItem name="ArrowLeft">
+    <ArrowLeft color="text-violet-600" />
+  </IconItem>
+  <IconItem name="ArrowUp">
+    <ArrowUp color="text-violet-600" />
+  </IconItem>
+  <IconItem name="ArrowRight">
+    <ArrowRight color="text-violet-600" />
+  </IconItem>
+  <IconItem name="ArrowDown">
+    <ArrowDown color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Calendar">
+    <Calendar color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Cancel">
+      <Cancel color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Checkmark">
+      <Checkmark color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Edit">
+      <Edit color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Eye">
+      <Eye color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Fullscreen">
+      <Fullscreen color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Heart">
+      <Heart color="text-violet-600" />
+  </IconItem>
+  <IconItem name="HeartFilled">
+      <HeartFilled color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Location">
+      <Location color="text-violet-600" />
+  </IconItem>
+  <IconItem name="LogOut">
+      <LogOut color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Mumble">
+      <Mumble color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Profile">
+      <Profile color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Reply">
+      <Reply color="text-violet-600" />
+  </IconItem>
+  <IconItem name="ReplyFilled">
+      <ReplyFilled color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Repost">
+      <Repost color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Send">
+      <Send color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Settings">
+      <Settings color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Share">
+      <Share color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Time">
+      <Time color="text-violet-600" />
+  </IconItem>
+  <IconItem name="Upload">
+      <Upload color="text-violet-600" />
+  </IconItem>
+
+</IconGallery>
